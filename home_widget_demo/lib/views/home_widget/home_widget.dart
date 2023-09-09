@@ -12,31 +12,58 @@ class HomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 170,
-      height: 170,
-      decoration: BoxDecoration(
-        image: DecorationImage(image: NetworkImage('$imgURL')),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          // Image.network(imgURL),
-          SizedBox(
+    // return Container(
+    //   width: 170,
+    //   height: 170,
+    //   decoration: BoxDecoration(
+    //     image: DecorationImage(image: NetworkImage('$imgURL')),
+    //   ),
+    //   child: Column(
+    //     mainAxisAlignment: MainAxisAlignment.center,
+    //     children: [
+    //       // Image.network(imgURL),
+    //       SizedBox(
+    //         child: Text(
+    //           "Wrestlin' with God, I don't really want to wrestle",
+    //           style: TextStyle(
+    //             color: Colors.white,
+    //             fontWeight: FontWeight.bold,
+    //             fontSize: 16, // Adjust the font size as needed
+    //           ),
+    //           textAlign: TextAlign.center, // Center the text
+    //         ),
+    //       ),
+    //       // Text(weather.cityName,
+    //       //     style: const TextStyle(color: Colors.white60, fontSize: 14)),
+    //     ],
+    //   ),
+    // );
+
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: Image.network(
+            'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/ksg-widget%403x.png',
+            fit: BoxFit.cover,
+          ),
+        ),
+
+        SizedBox(
+          height: 100,
+          width: 100,
+          child: Center(
             child: Text(
               "Wrestlin' with God, I don't really want to wrestle",
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 16, // Adjust the font size as needed
-              ),
-              textAlign: TextAlign.center, // Center the text
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 10),
             ),
           ),
-          // Text(weather.cityName,
-          //     style: const TextStyle(color: Colors.white60, fontSize: 14)),
-        ],
-      ),
+        )
+
+        //           style: const TextStyle(
+        //               color: Colors.white, fontWeight: FontWeight.bold),
+        //           textScaleFactor: 1.7),
+      ],
     );
   }
 }
