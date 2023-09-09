@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_weather_bg_null_safety/utils/weather_type.dart';
-import 'package:home_widget_demo/models/weather.dart';
+// import 'package:home_widget_demo/models/weather.dart';
 
 class HomeWidget extends StatelessWidget {
-  final Weather weather;
+  final String imgURL;
 
   const HomeWidget({
     Key? key,
-    required this.weather,
+    required this.imgURL,
   }) : super(key: key);
 
   @override
@@ -16,24 +16,23 @@ class HomeWidget extends StatelessWidget {
       width: 170,
       height: 170,
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: NetworkImage(
-              'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/ksg-widget%403x.png'),
-          fit: BoxFit.fitHeight,
-        ),
+        image: DecorationImage(image: NetworkImage('$imgURL')),
       ),
-      // decoration: BoxDecoration(
-      //   gradient: LinearGradient(
-      //     colors: WeatherUtil.getColor(weather.weatherType),
-      //   ),
-      // ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network(weather.image),
-          Text("Wrestlin' with God, I don't really want to wrestle",
-              style: const TextStyle(
-                  color: Colors.white, fontWeight: FontWeight.bold),
-              textScaleFactor: 1.7),
+          // Image.network(imgURL),
+          SizedBox(
+            child: Text(
+              "Wrestlin' with God, I don't really want to wrestle",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 16, // Adjust the font size as needed
+              ),
+              textAlign: TextAlign.center, // Center the text
+            ),
+          ),
           // Text(weather.cityName,
           //     style: const TextStyle(color: Colors.white60, fontSize: 14)),
         ],
