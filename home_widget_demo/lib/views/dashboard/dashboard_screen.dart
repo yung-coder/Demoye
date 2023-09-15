@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_widget_demo/home_widget_config.dart';
-import 'package:home_widget_demo/views/home_widget/home_widget.dart';
+import 'package:home_widget_demo/home_widget_config2.dart';
+import 'package:home_widget_demo/views/home_widget/home_widget_1.dart';
+import 'package:home_widget_demo/views/home_widget/home_widget_2.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -10,32 +12,28 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-<<<<<<< HEAD
-  // Location loc = Location.pickLocation();
-  // wt.Weather? currentWeather;
-
-=======
->>>>>>> 961167750440698aa17faa5c7794cf43442562f0
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       HomeWidgetConfig.initialize().then((_) => {callApiAndUpdateUI()});
+      HomeWidgetConfig2.initialize().then((_) => {callandUpdateUi2()});
     });
     super.initState();
   }
 
   callApiAndUpdateUI() {
-    setState(() {});
     HomeWidgetConfig.update(
       context,
-      HomeWidget(
-        imgURL:
-<<<<<<< HEAD
-            'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/ksg-widget%403x.png',
-=======
-            'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/wtt-widget.png',
->>>>>>> 961167750440698aa17faa5c7794cf43442562f0
-      ),
+      HomeWidget(),
+    );
+
+    setState(() {});
+  }
+
+  callandUpdateUi2() {
+    HomeWidgetConfig2.update(
+      context,
+      HomeWidget2(),
     );
     setState(() {});
   }
@@ -43,17 +41,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       body: Center(
         child: Text('Hello world'),
-=======
-      body: Container(
-        child: Center(
-            child: Text(
-          "Hello",
-          style: TextStyle(color: Colors.white),
-        )),
->>>>>>> 961167750440698aa17faa5c7794cf43442562f0
       ),
     );
   }

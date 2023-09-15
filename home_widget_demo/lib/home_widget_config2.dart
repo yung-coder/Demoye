@@ -5,15 +5,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:path_provider/path_provider.dart';
 
-class HomeWidgetConfig {
+class HomeWidgetConfig2 {
   static Future<void> update(context, Widget widget) async {
-    String iosWidget = 'home_widget_demo';
-    String androidWidget = 'CustomHomeView';
-    Uint8List bytes = await DavinciCapture.offStage(widget,
-        context: context,
-        returnImageUint8List: true,
-        wait: const Duration(seconds: 1),
-        openFilePreview: true);
+    String iosWidget = 'home_widget_demo2';
+    String androidWidget = 'CustomHomeView2';
+    Uint8List bytes = await DavinciCapture.offStage(
+      widget,
+      context: context,
+      returnImageUint8List: true,
+      wait: const Duration(seconds: 1),
+      openFilePreview: true,
+    );
 
     final directory = await getApplicationSupportDirectory();
     File tempFile =
@@ -28,7 +30,7 @@ class HomeWidgetConfig {
   }
 
   static Future<void> initialize() async {
-    String groupId = 'group.home_widget_demo_group';
+    String groupId = 'group.home_widget_demo_group_2';
     await HomeWidget.setAppGroupId(groupId);
   }
 }
