@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 // import 'package:flutter_weather_bg_null_safety/utils/weather_type.dart';
 // import 'package:home_widget_demo/models/weather.dart';
+=======
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
 
 class HomeWidget extends StatelessWidget {
   final String imgURL;
@@ -12,6 +15,7 @@ class HomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     // return Container(
     //   width: 170,
     //   height: 170,
@@ -39,15 +43,24 @@ class HomeWidget extends StatelessWidget {
     //   ),
     // );
 
+=======
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
     return Stack(
       children: [
         Positioned.fill(
           child: Image.network(
+<<<<<<< HEAD
             'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/ksg-widget%403x.png',
             fit: BoxFit.cover,
           ),
         ),
 
+=======
+            imgURL,
+            fit: BoxFit.cover,
+          ),
+        ),
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
         SizedBox(
           height: 100,
           width: 100,
@@ -59,10 +72,13 @@ class HomeWidget extends StatelessWidget {
             ),
           ),
         )
+<<<<<<< HEAD
 
         //           style: const TextStyle(
         //               color: Colors.white, fontWeight: FontWeight.bold),
         //           textScaleFactor: 1.7),
+=======
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
       ],
     );
   }

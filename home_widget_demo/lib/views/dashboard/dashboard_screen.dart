@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_bg_null_safety/flutter_weather_bg.dart';
-import 'package:home_widget_demo/constants/strings.dart';
 import 'package:home_widget_demo/home_widget_config.dart';
 import 'package:home_widget_demo/views/home_widget/home_widget.dart';
-import 'package:weather/weather.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -13,9 +10,12 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+<<<<<<< HEAD
   // Location loc = Location.pickLocation();
   // wt.Weather? currentWeather;
 
+=======
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -30,7 +30,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
       context,
       HomeWidget(
         imgURL:
+<<<<<<< HEAD
             'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/ksg-widget%403x.png',
+=======
+            'https://raw.githubusercontent.com/aronvisser19/ye-said/main/android-widgets/images/wtt-widget.png',
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
       ),
     );
     setState(() {});
@@ -38,12 +42,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var screenHeight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
+<<<<<<< HEAD
       body: Center(
         child: Text('Hello world'),
+=======
+      body: Container(
+        child: Center(
+            child: Text(
+          "Hello",
+          style: TextStyle(color: Colors.white),
+        )),
+>>>>>>> 961167750440698aa17faa5c7794cf43442562f0
       ),
     );
   }
