@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:home_widget_demo/configs/home_widget_config.dart';
 import 'package:home_widget_demo/configs/home_widget_config2.dart';
 import 'package:home_widget_demo/configs/home_widget_config3.dart';
-import 'package:home_widget_demo/views/home_widget/home_widget_1.dart';
-import 'package:home_widget_demo/views/home_widget/home_widget_2.dart';
-import 'package:home_widget_demo/views/home_widget/home_widget_3.dart';
+import 'package:home_widget_demo/views/Widgets/home_widget_1.dart';
+import 'package:home_widget_demo/views/Widgets/home_widget_2.dart';
+import 'package:home_widget_demo/views/Widgets/home_widget_3.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});

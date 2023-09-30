@@ -43,13 +43,33 @@
                 android:resource="@xml/home_widget_demo_example2" />
         </receiver>
 
+<<<<<<< HEAD
         <receiver android:name="CustomHomeView3"
             android:exported="true">
+=======
+        <receiver android:name="KSGView"
+            android:exported="true"  android:label="KSG"
+>
+>>>>>>> 25fa385023315160f4d422324a434289a1862bf4
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider"
+<<<<<<< HEAD
                 android:resource="@xml/home_widget_demo_example3" />
+=======
+                android:resource="@xml/ksg" />
+        </receiver>
+
+         <receiver android:name="YeView"
+            android:exported="true"  android:label="Ye"
+>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/ye" />
+>>>>>>> 25fa385023315160f4d422324a434289a1862bf4
         </receiver>
 
         <!-- Don't delete the meta-data below.
